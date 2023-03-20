@@ -4,6 +4,6 @@ import logindata from './logindata';
 
 // ==============================|| COMBINE REDUCERS ||============================== //
 
-const reducers = combineReducers({logindata});
+const reducers = combineReducers({ logindata });
 
 export default reducers;
