@@ -1,5 +1,3 @@
-export default function Report(){
-    return (
-        <>report works</>
-     )
+export default function Report() {
+    return <>report works</>;
 }
