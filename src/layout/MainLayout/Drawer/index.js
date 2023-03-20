@@ -12,8 +12,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useNavigate } from 'react-router-dom';
-import { MailOutlined, SettingOutlined, AppstoreOutlined, DashboardOutlined, FunnelPlotOutlined } from '@ant-design/icons';
-import { Menu } from 'antd';
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -23,7 +21,6 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Style } from '@mui/icons-material';
 
 export default function DrawerContent({open , handleDrawerToggle}){
     const drawerWidth = 250;
@@ -58,14 +55,14 @@ export default function DrawerContent({open , handleDrawerToggle}){
 
      const menu = [
         {
-          icon: <DashboardOutlined/>,
+          // icon: <DashboardOutlined/>,
           title: 'Dashboard',
           to:'/demo-page',
           type:'group',
           items: []
         },
         {
-          icon: <DashboardOutlined/>,
+          // icon: <DashboardOutlined/>,
           title: 'Education',
           type:'group',
           items: [
