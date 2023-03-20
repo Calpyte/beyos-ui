@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useRoutes } from 'react-router-dom';
 import MainLayout from '../layout/MainLayout';
 import Loadable from '../components/Loadable';
@@ -8,6 +7,8 @@ import { Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 // project import
 
 const CombustionModule = Loadable(lazy(() => import('../pages/CombustionModule')));
@@ -22,8 +23,13 @@ export default function ThemeRoutes() {
 
     useEffect(() => {}, [logindata]);
 
-    const PrivateRoute = ({ path, element, isAuthenticated }) => {
+    const PrivateRoute = ({ element, isAuthenticated }) => {
         return isAuthenticated ? element : <Navigate to="/auth" replace />;
+    };
+
+    PrivateRoute.propTypes = {
+        element: PropTypes.object,
+        isAuthenticated: PropTypes.bool
     };
 
     return useRoutes([
@@ -37,7 +43,7 @@ export default function ThemeRoutes() {
                 },
                 {
                     path: '/combustion/*',
-                    element: <PrivateRoute path={'/combustion/*'} element={<CombustionModule />} isAuthenticated={logindata.isLoggedIn} />
+                    element: <PrivateRoute element={<CombustionModule />} isAuthenticated={logindata.isLoggedIn} />
                 },
                 {
                     path: '/',
