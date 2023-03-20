@@ -20,7 +20,7 @@
         },
         "ecmaVersion": 12
     },
-    "plugins": ["prettier", "react", "react-hooks"],
+    "plugins": ["prettier", "react", "react-hooks","import"],
     "rules": {
         "react/jsx-filename-extension": 0,
         "no-param-reassign": 0,
@@ -34,12 +34,14 @@
         "jsx-a11y/anchor-is-valid": 0,
         "prefer-destructuring": 0,
         "no-shadow": 0,
-        "no-unused-vars": [
-            1,
-            {
-                "ignoreRestSiblings": false
-            }
-        ],
+        "no-unused-vars": 0,
+        // [
+        //     "error", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" },
+        //     1,
+        //     {
+        //         "ignoreRestSiblings": false
+        //     }
+        // ],
         "prettier/prettier": [
             2,
             {
