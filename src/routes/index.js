@@ -18,10 +18,12 @@ const Register = Loadable(lazy(() => import('../pages/Authentication/register'))
 
 // ==============================|| ROUTING RENDER ||============================== //
 
-export default function ThemeRoutes() {
+export default function ThemeRoutes({ role }) {
     const logindata = useSelector((state) => state.logindata);
 
-    useEffect(() => {}, [logindata]);
+    useEffect(() => {
+        alert(role);
+    }, [logindata]);
 
     const PrivateRoute = ({ element, isAuthenticated }) => {
         return isAuthenticated ? element : <Navigate to="/auth" replace />;
@@ -29,7 +31,7 @@ export default function ThemeRoutes() {
 
     PrivateRoute.propTypes = {
         element: PropTypes.object,
-        isAuthenticated: PropTypes.bool
+        isAuthenticated: PropTypes.bool || PropTypes.string
     };
 
     return useRoutes([

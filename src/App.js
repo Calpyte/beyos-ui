@@ -1,14 +1,19 @@
 import * as React from 'react';
 import ScrollTop from './components/ScrollTop';
 import ThemeRoutes from './routes';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { Role } from 'components/role';
 
 export default function App() {
-    useEffect(() => {}, []);
+    const [role, setRole] = useState(Role.CLIENT);
+
+    useEffect(() => {
+        setRole(Role.CLIENT);
+    }, [role]);
 
     return (
         <ScrollTop>
-            <ThemeRoutes />
+            <ThemeRoutes role={role} />
         </ScrollTop>
     );
 }

@@ -218,10 +218,10 @@ export default function MenuProvider({ handleDrawer }) {
             >
                 <DrawerHeader>
                     <img
-                        src="http://103.108.220.162:3050/whatsapp-image-20221222-at-923-3@2x.png"
+                        src="https://www.logodesign.net/logo/saxophone-in-front-of-rectangle-with-music-notes-400ld.png"
                         alt="logo"
                         style={{ width: '80%', objectFit: 'contain' }}
-                    />
+                    ></img>
                     {/* <IconButton onClick={handleDrawerToggle}>
          <ChevronLeftIcon />
       </IconButton> */}
